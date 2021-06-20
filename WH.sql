@@ -124,6 +124,7 @@ create table WH.Bio
 	BioKey int identity
 		constraint Bio_pk
 			primary key nonclustered,
+    BusinessEntityID int,
 	BirthDate date,
 	HireDate date,
 	MaritalKey int
@@ -144,6 +145,7 @@ create table WH.Employee
 	EmployeeKey int identity
 		constraint Employee_pk
 			primary key nonclustered,
+    BusinessEntityID int,
 	SalesQuota money,
 	SalesYTD money,
 	CommissionPct smallmoney,
