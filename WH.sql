@@ -1,3 +1,8 @@
+create database AdventureWH6;
+
+-- masuk ke AdventureWH6 terlebih dahulu!!! sebelum melanjutkan
+create schema WH;
+
 -- product category
 create table WH.ProductCategory
 (
