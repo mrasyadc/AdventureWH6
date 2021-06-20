@@ -54,3 +54,14 @@ join WH.ProductCategory PC on PC.ProductCategoryID = PSC.ProductCategoryID
 insert into AdventureWH6.WH.Product(ProductID, ProductName, ProductSubCategoryKey)
 select ProductID, Name, ProductCategoryKey from AdventureWorks2019.Production.Product P
 join WH.ProductSubCategory PSC on PSC.ProductSubCategoryId = P.ProductSubcategoryID
+
+-- Time
+insert into AdventureWH6.WH.Time(Year, MonthNumber, DayOfMonth, Date, MonthName, DayName)
+select DISTINCT
+    DATEPART(Year, OrderDate) as Year,
+    DATEPART(Month, OrderDate) as MonthNumber,
+    DATEPART(day,OrderDate) as DayOfMonth,
+    OrderDate,
+    DATENAME(Month, OrderDate) as MonthName,
+    DATENAME(DW,OrderDate) as DayName
+from AdventureWorks2019.Sales.SalesOrderHeader
