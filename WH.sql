@@ -136,7 +136,9 @@ create table WH.Bio
 	TitleKey int
 		constraint Bio_Title_TitleKey_fk
 			references WH.Title,
-	Name nvarchar(50)
+	FirstName nvarchar(50),
+	MiddleName nvarchar(50),
+	LastName nvarchar(50)
 )
 
 -- Employee
