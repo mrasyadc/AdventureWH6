@@ -58,16 +58,6 @@ create table WH.Territory
 	[Group] nvarchar(50)
 )
 
--- -- pay
--- create table WH.Pay
--- (
--- 	PayKey int identity
--- 		constraint Pay_pk
--- 			primary key nonclustered,
--- 	Rate money,
--- 	PayFrequency int
--- )
-
 -- Department
 create table WH.Department
 (
