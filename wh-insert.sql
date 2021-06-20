@@ -40,3 +40,17 @@ join WH.Department D on D.DepartmentID = EDH.DepartmentID
 left join WH.Territory T on T.TerritoryID = SP.TerritoryID
 join WH.Bio B on B.BusinessEntityID = E.BusinessEntityID
 ;
+
+-- ProductCategory
+insert into AdventureWH6.WH.ProductCategory(ProductCategoryID, ProductCategoryName)
+select ProductCategoryID, Name from AdventureWorks2019.Production.ProductCategory
+
+-- ProductSubCategory
+insert into AdventureWH6.WH.ProductSubCategory(ProductSubCategoryId, ProductSubCategoryName, ProductCategoryKey)
+select ProductSubcategoryID, Name, ProductCategoryKey from AdventureWorks2019.Production.ProductSubcategory PSC
+join WH.ProductCategory PC on PC.ProductCategoryID = PSC.ProductCategoryID
+
+-- Product
+insert into AdventureWH6.WH.Product(ProductID, ProductName, ProductSubCategoryKey)
+select ProductID, Name, ProductCategoryKey from AdventureWorks2019.Production.Product P
+join WH.ProductSubCategory PSC on PSC.ProductSubCategoryId = P.ProductSubcategoryID
