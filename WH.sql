@@ -46,9 +46,11 @@ create table WH.Time
 		constraint Time_pk
 			primary key nonclustered,
 	Year int,
-	Month int,
-	Day int,
-	date date
+	MonthNumber int,
+	MonthName nvarchar(10),
+	DayOfMonth int,
+	DayName nvarchar(10),
+	Date datetime
 )
 
 -- territory
@@ -179,7 +181,6 @@ create table WH.FactTable
 		constraint FactTable_Time_TimeKey_fk
 			references WH.Time,
 	TotalSales money,
-	date date
 )
 
 alter table WH.FactTable ADD CONSTRAINT PK_FACTID PRIMARY KEY (SalesOrderID, SalesOrderDetailID)
