@@ -58,15 +58,15 @@ create table WH.Territory
 	[Group] nvarchar(50)
 )
 
--- pay
-create table WH.Pay
-(
-	PayKey int identity
-		constraint Pay_pk
-			primary key nonclustered,
-	Rate money,
-	PayFrequency int
-)
+-- -- pay
+-- create table WH.Pay
+-- (
+-- 	PayKey int identity
+-- 		constraint Pay_pk
+-- 			primary key nonclustered,
+-- 	Rate money,
+-- 	PayFrequency int
+-- )
 
 -- Department
 create table WH.Department
@@ -147,9 +147,8 @@ create table WH.Employee
 	SalesQuota money,
 	SalesYTD money,
 	CommissionPct smallmoney,
-	PayKey int
-		constraint Employee_Pay_PayKey_fk
-			references WH.Pay,
+	PayRate money,
+	PayFrequency int,
 	ShiftKey int
 		constraint Employee_Shift_ShiftKey_fk
 			references WH.Shift,
