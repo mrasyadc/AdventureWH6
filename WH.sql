@@ -153,6 +153,8 @@ create table WH.Employee
 	CommissionPct smallmoney,
 	PayRate money,
 	PayFrequency int,
+	SickLeaveHours int,
+	VacationHours int,
 	ShiftKey int
 		constraint Employee_Shift_ShiftKey_fk
 			references WH.Shift,
