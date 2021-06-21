@@ -3,3 +3,4 @@
 --cukup time dan employee
 --employee nya gabung sama bio aja
 --employee nya perbaiki buat dua bagian
+--ngga perlu pakai SalesOrderID dan SalesOrderDetailID karena digabung dengan Purchasing
