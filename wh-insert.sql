@@ -40,7 +40,15 @@ select DISTINCT
     DATENAME(DW,OrderDate) as DayName
 from AdventureWorks2019.Sales.SalesOrderHeader;
 
--- Fact Table
+-- Fact Table dari Sales
+insert into WH.FactTable (ProductKey, EmployeeKey, TimeKey, TotalSales)
+select ProductKey, EmployeeKey, TimeKey, LineTotal from AdventureWorks2019.Sales.SalesOrderDetail SOD
+join AdventureWorks2019.Sales.SalesOrderHeader SOH on SOD.SalesOrderID = SOH.SalesOrderID
+join WH.Product P on P.ProductID = SOD.ProductID
+join WH.Time T on T.Date = SOH.OrderDate
+join WH.Employee E on E.BusinessEntityID = SOH.SalesPersonID
+
+-- Fact Table dari Purchase
 insert into WH.FactTable (ProductKey, EmployeeKey, TimeKey, TotalSales)
 select ProductKey, EmployeeKey, TimeKey, LineTotal from AdventureWorks2019.Sales.SalesOrderDetail SOD
 join AdventureWorks2019.Sales.SalesOrderHeader SOH on SOD.SalesOrderID = SOH.SalesOrderID
