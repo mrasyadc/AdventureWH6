@@ -1,0 +1,5 @@
+--tambah purchasing ke fact table jadiin satu sama sales
+--ngga perlu pakai product gapapa
+--cukup time dan employee
+--employee nya gabung sama bio aja
+--employee nya perbaiki buat dua bagian
