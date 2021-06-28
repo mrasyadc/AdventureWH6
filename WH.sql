@@ -15,7 +15,7 @@ create table WH.Time
 	MonthName nvarchar(10),
 	DayOfMonth int,
 	DayName nvarchar(10),
-	Date datetime
+	Date datetime unique
 )
 
 -- Department
