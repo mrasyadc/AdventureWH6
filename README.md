@@ -8,6 +8,6 @@ Proyek ini merupakan tugas akhir mata kuliah Manajemen Basis Data untuk melakuka
 3. Terakhir gunakan index.sql untuk membuat index agar mempercepat query
 
 # Keterangan file
-index.sql -> membuat index
-procedure.sql -> insert fact dan dimensi namun versi procedure
-analysis.sql -> query untuk memunculkan informasi yang dicari atau analisis data
+- index.sql -> membuat index
+- procedure.sql -> insert fact dan dimensi namun versi procedure
+- analysis.sql -> query untuk memunculkan informasi yang dicari atau analisis data
