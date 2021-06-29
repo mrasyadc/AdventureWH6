@@ -11,3 +11,6 @@ Proyek ini merupakan tugas akhir mata kuliah Manajemen Basis Data untuk melakuka
 - index.sql -> membuat index
 - procedure.sql -> insert fact dan dimensi namun versi procedure
 - analysis.sql -> query untuk memunculkan informasi yang dicari atau analisis data
+- functions.sql -> membuat function getUmur
+- wh-insert.sql -> insert fact dan dimensi
+- WH.sql -> create table
