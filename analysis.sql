@@ -8,7 +8,7 @@ ORDER BY TotalKontribusi DESC
 
 -- pada bulan maret 2015, karyawan dengan umur berapakah yang memiliki kontribusi tertinggi?
 select
-  (CONVERT(int,CONVERT(char(8),'20150331',112))-CONVERT(char(8),BirthDate,112))/10000 AS Umur,
+   dbo.getUmur(BirthDate, '20150331') AS Umur,
     SUM(TotalWork) AS TotalKontribusi from WH.FactTable F
 join WH.Employee E on E.EmployeeKey = F.EmployeeKey
 join WH.Time T on T.TimeKey = F.TimeKey
