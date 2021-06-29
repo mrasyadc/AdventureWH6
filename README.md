@@ -14,8 +14,9 @@ Proyek ini merupakan tugas akhir mata kuliah Manajemen Basis Data untuk melakuka
 1. Mulai dari WH.sql untuk pembuatan skema awal dan tabel
 2. lanjut ke procedure.sql untuk membuat procedure
 3. exec procedure di dalam procedure.sql paling bawah
-4. gunakan index.sql untuk membuat index agar mempercepat query
-5. gunakan analysis.sql sesuka hati
+4. gunakan functions.sql untuk membuat function
+5. gunakan index.sql untuk membuat index agar mempercepat query
+6. gunakan analysis.sql sesuka hati
 
 # Keterangan file
 - index.sql -> membuat index
